@@ -1,0 +1,74 @@
+/* All Selector */ 
+* { 
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* Section CSS */
+.container { 
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black;
+    font-family: sans-serif;
+}
+/* UL CSS */
+ul { 
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+/* UL LI CSS*/
+ul li { 
+    list-style: none;
+}
+/* UL LI A CSS */
+ul li a { 
+    text-decoration: none;
+    font-size: 22px;
+    padding: 1rem 2rem;
+    position: relative;
+    background: transparent;
+    font: bold;
+    color: white;
+}
+/* Before Selector CSS */
+a:before { 
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: white;
+    transform: scaleX(0);
+    transition: all .5s;
+    transform-origin: left;
+}
+
+/* UL LI a:hover:before CSS
+ul li a:hover:before { 
+    transform: scaleX(1);
+} */
+
+/* UL LI a:hover:before & UL LI a:hover:after CSS */ 
+ul li a:hover:before, 
+ul li a:hover:after { 
+    transform: scaleX(1);
+}
+/* a:after CSS */ 
+a:after { 
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0; 
+    width: 100%;
+    height: 3px;
+    transform: scaleX(0);
+    transition: all 1s;
+    transform-origin: right;
+    background: white;
+}
